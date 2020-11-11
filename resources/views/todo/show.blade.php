@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container">
         <div class="col-md-10">
@@ -18,6 +17,6 @@
             </tr>
             </tbody>
         </table>
-        <button class="btn btn-primary" type="button" onclick="history.back()">戻る</button>
+        @include('parts.button.back')
     </div>
-@endsection
+@endsection 
