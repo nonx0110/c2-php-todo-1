@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Request\CreateTodoRequest;
+use App\Http\Requests\CreateTodoRequest;
 use App\Todo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -71,7 +71,8 @@ class TodoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $todo = Auth::user()->todos()->findOrFail($id);
+        return view('todo/edit', compact('todo'));
     }
 
     /**
