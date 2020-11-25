@@ -25,6 +25,7 @@
                         <td>{{ $todo->due_date }}</td>
                         <th>
                             <a href="/todo/{{ $todo->id }}/edit" class="btn btn-success"><i class="fas fa-edit mr-2"></i>編集</a>
+                            <a href="/todo/{{ $todo->id }}/destroy" class="btn btn-success"><i class="fas fa-edit mr-2"></i>削除</a>
                         </th>
                     </tr>
                 @endforeach
