@@ -13,7 +13,9 @@
             <form action="/todo/{{ $todo->id }}" method="POST">
                 @method('DELETE')
                 @csrf
-                <button class="btn btn-danger" type="submit"><i class="fas fa-trash-alt mr-2"></i>削除</button>
+                <div style="margin-left:10%;margin-right:10%;">
+                <button class="btn btn-danger" type="submit" ><i class="fas fa-trash-alt mr-2"></i>削除</button>
+                </div>
             </form>
             <hr>
             @include('parts.button.back')
