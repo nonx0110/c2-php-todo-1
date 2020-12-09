@@ -88,6 +88,7 @@ class TodoController extends Controller
         $todo = Auth::user()->todos()->findOrFail($id);
         $todo->title = $request->title;
         $todo->due_date = $request->due_date;
+        $todo->status = $request->status;
         $todo->save();
         //タスク単体ページにリダイレクト
         return redirect()->to('/todo/' . $todo->id);
@@ -108,6 +109,6 @@ class TodoController extends Controller
         $todo->delete();
         
         //タスク一覧に戻る
-        return redirect()->to( 'todo' );
+        return redirect()->to('/todo');
     }
 }

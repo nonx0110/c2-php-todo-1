@@ -14,14 +14,13 @@ class Todo extends Model
  * 
  * @return string
  */
-    public function getStatusText(): date_interval_create_from_date_string
-    {
-        if(empty(self::STATUS[$this->status]))
-        {
-            return "";
-        }
-
-        return self::STATUS[$this->status];
+public function getStatusText(): string
+{
+    if (empty(self::STATUS[$this->status])) {
+        return  "";
     }
+
+    return self::STATUS[$this->status];
+}
 }
 
