@@ -9,7 +9,6 @@
                 <th>タイトル</th>
                 <th>期限</th>
                 <th>状態</th>
-                
             </tr>
             </thead>
             <tbody>
