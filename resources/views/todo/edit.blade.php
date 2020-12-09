@@ -9,6 +9,12 @@
                 @include('parts.todo.input', ['todo' => $todo])
                 <button class="btn btn-primary my-2" type="submit">更新</button>
             </form>
+            
+            <form action="/todo/{{ $todo->id }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <button class="btn btn-danger" type="submit"><i class="fas fa-trash-alt mr-2"></i>削除</button>
+            </form>
             <hr>
             @include('parts.button.back')
         </div>
